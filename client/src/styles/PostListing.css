@@ -27,3 +27,7 @@
   background: linear-gradient(to bottom, transparent, white 100%);
   /* 'white' should be the color of your card's background */
 }
+
+.chat-icon {
+  font-size: 2rem;
+}

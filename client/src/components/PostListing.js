@@ -31,8 +31,6 @@ function PostListing() {
     return <div>No posts available.</div>;
   }
 
-  const comment = posts.commentCounter === 1 ? "Comment" : "Comments";
-
   return (
     <Container className="mt-5">
       <div id="topicList">
@@ -41,17 +39,27 @@ function PostListing() {
             <div className="my-5">
               <div className="card">
                 <div className="mx-4 my-2">
-                  <div className="d-flex justify-content-between align-items-center mt-2 mb-2">
-                    <h5 className="fw-bold mb-0">{post.title}</h5>
-                    <span className="badge bg-secondary">
-                      {post.commentCounter} {comment}
-                    </span>
+                  <div className="d-flex justify-content-between align-items-center my-2">
+                    <h3 className="fw-bold mb-0">{post.title}</h3>
                   </div>
                   <div className="description-wrapper mb-2">
                     <p className="description-preview mb-2">
                       {post.description}
                     </p>
                   </div>
+                  <span className="fw-bold fs-6 badge bg-secondary rounded-pill">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      fill="currentColor"
+                      className="bi bi-chat-square-text-fill me-1"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.533a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z" />
+                    </svg>
+                    {post.commentCounter}
+                  </span>
                 </div>
               </div>
             </div>
