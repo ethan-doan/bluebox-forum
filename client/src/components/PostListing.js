@@ -37,7 +37,7 @@ function PostListing() {
         {posts.map((post) => (
           <Link to={`/post/${post._id}`} key={post._id}>
             <div className="my-5">
-              <div className="card">
+              <div className="card card-hover-effect">
                 <div className="mx-4 my-2">
                   <div className="d-flex justify-content-between align-items-center my-2">
                     <h3 className="fw-bold mb-0">{post.title}</h3>
