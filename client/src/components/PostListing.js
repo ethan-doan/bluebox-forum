@@ -35,7 +35,11 @@ function PostListing() {
     <Container className="mt-5">
       <div id="topicList">
         {posts.map((post) => (
-          <Link to={`/post/${post._id}`} key={post._id}>
+          <Link
+            to={`/post/${post._id}`}
+            key={post._id}
+            style={{ textDecoration: "none" }}
+          >
             <div className="my-5">
               <div className="card card-hover-effect">
                 <div className="mx-4 my-2">

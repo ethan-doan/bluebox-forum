@@ -45,7 +45,3 @@
 .card-hover-effect:hover::after {
   opacity: 1; /* Show the overlay on hover */
 }
-
-a {
-  text-decoration: none;
-}
