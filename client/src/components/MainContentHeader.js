@@ -67,8 +67,13 @@ function MainContentHeader() {
       {/* Create New Post Dropdown */}
       <Collapse in={open}>
         <div id="postDropdown">
+          <hr />
           <Form.Group className="mb-3">
-            <Form.Label htmlFor="topicTitle">Topic Title</Form.Label>
+            <Form.Label htmlFor="topicAuthor">Your Name</Form.Label>
+            <Form.Control type="text" id="topicAuthor"></Form.Control>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label htmlFor="topicTitle">Title</Form.Label>
             <Form.Control type="text" id="topicTitle" required />
           </Form.Group>
           <Form.Group className="mb-3">

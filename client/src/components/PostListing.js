@@ -46,6 +46,9 @@ function PostListing() {
                   <div className="d-flex justify-content-between align-items-center my-2">
                     <h3 className="fw-bold mb-0">{post.title}</h3>
                   </div>
+                  <p>
+                    @{post.author} | {post.date}
+                  </p>
                   <div className="description-wrapper mb-2">
                     <p className="description-preview mb-2">
                       {post.description}
