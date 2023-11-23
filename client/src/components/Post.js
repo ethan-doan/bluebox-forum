@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { fetchPostById } from "../api/apiClient";
+import { Form, Button } from "react-bootstrap";
+import "../styles/Post.css";
 
 function Post() {
   const [post, setPost] = useState(null);
@@ -37,16 +39,19 @@ function Post() {
       </ul>
       <div className="mt-4">
         <h5>Add a Comment</h5>
-        <form>
-          <textarea
-            className="form-control my-3"
-            rows="3"
+        <Form.Group>
+          <Form.Label></Form.Label>
+          <Form.Control
+            as="textarea"
             placeholder="Type your comment here..."
-          ></textarea>
-          <button type="submit" className="btn btn-primary">
-            Submit Comment
-          </button>
-        </form>
+            rows={3}
+            className="mb-3"
+            required
+          ></Form.Control>
+        </Form.Group>
+        <Button id="submitComment" type="button">
+          Submit
+        </Button>
       </div>
     </div>
   );
