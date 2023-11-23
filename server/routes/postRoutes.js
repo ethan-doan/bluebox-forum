@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const postController = require("../controllers/postController");
+const postController = require("../controllers/postController.js");
 
 // Get all posts
 router.get("/", postController.getAllPosts);
@@ -9,7 +9,7 @@ router.get("/", postController.getAllPosts);
 router.get("/:id", postController.getPostById);
 
 // // Create a new post
-// router.post("/", postController.createPost);
+router.post("/", postController.createPost);
 
 // // Update a post by ID
 // router.put("/:id", postController.updatePost);

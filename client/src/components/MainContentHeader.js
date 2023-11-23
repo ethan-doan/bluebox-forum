@@ -5,10 +5,26 @@ import Collapse from "react-bootstrap/Collapse";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
+import { addPost } from "../api/apiClient";
 import "../styles/MainContentHeader.css";
 
-function MainContentHeader() {
+function MainContentHeader({ onAddPosts }) {
   const [open, setOpen] = useState(false);
+  const [author, setAuthor] = useState("");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleAuthorChange = (e) => {
+    setAuthor(e.target.value);
+  };
+
+  const handleTitleChange = (e) => {
+    setTitle(e.target.value);
+  };
+
+  const handleDescriptionChange = (e) => {
+    setDescription(e.target.value);
+  };
 
   const renderIcon = () => {
     if (open) {
@@ -45,6 +61,24 @@ function MainContentHeader() {
     }
   };
 
+  const submitPost = async () => {
+    try {
+      const postData = {
+        author,
+        title,
+        description,
+      };
+      await addPost(postData);
+      setAuthor("");
+      setTitle("");
+      setDescription("");
+      setOpen(false);
+      onAddPosts();
+    } catch (error) {
+      console.error("Error submitting post:", error);
+    }
+  };
+
   return (
     <Container className="mt-5">
       <Row className="d-flex justify-content-between align-items-center">
@@ -70,11 +104,21 @@ function MainContentHeader() {
           <hr />
           <Form.Group className="mb-3">
             <Form.Label htmlFor="topicAuthor">Your Name</Form.Label>
-            <Form.Control type="text" id="topicAuthor"></Form.Control>
+            <Form.Control
+              type="text"
+              id="topicAuthor"
+              onChange={handleAuthorChange}
+              required
+            ></Form.Control>
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label htmlFor="topicTitle">Title</Form.Label>
-            <Form.Control type="text" id="topicTitle" required />
+            <Form.Control
+              type="text"
+              id="topicTitle"
+              onChange={handleTitleChange}
+              required
+            />
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label htmlFor="topicDescription">Description</Form.Label>
@@ -82,10 +126,11 @@ function MainContentHeader() {
               as="textarea"
               id="topicDescription"
               rows={3}
+              onChange={handleDescriptionChange}
               required
             />
           </Form.Group>
-          <Button id="newTopicForm" type="button">
+          <Button id="newTopicForm" type="button" onClick={submitPost}>
             Submit
           </Button>
         </div>

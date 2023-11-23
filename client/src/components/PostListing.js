@@ -1,36 +1,8 @@
-import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
-import { fetchPosts } from "../api/apiClient";
 import "../styles/PostListing.css";
 
-function PostListing() {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const loadPosts = async () => {
-      try {
-        const data = await fetchPosts();
-        setPosts(data);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error loading posts:", error);
-        setLoading(false);
-      }
-    };
-
-    loadPosts();
-  }, []);
-
-  if (loading) {
-    return <div>Loading posts...</div>;
-  }
-
-  if (posts.length === 0) {
-    return <div>No posts available.</div>;
-  }
-
+function PostListing({ posts }) {
   return (
     <Container className="mt-5">
       <div id="topicList">
