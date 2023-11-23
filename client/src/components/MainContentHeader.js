@@ -80,7 +80,7 @@ function MainContentHeader() {
               required
             />
           </Form.Group>
-          <Button id="newTopicForm" type="button" variant="primary">
+          <Button id="newTopicForm" type="button">
             Submit
           </Button>
         </div>
