@@ -1,0 +1,21 @@
+.description-wrapper {
+  position: relative;
+  max-height: 7.5em; /* Adjust for 3 lines based on line-height */
+  overflow: hidden;
+  line-height: 1.5em; /* Your line-height may vary */
+}
+
+.description-preview {
+  margin: 0;
+  /* Additional styling as needed */
+}
+
+.fade-effect::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1.5em; /* Height should match the line-height */
+  background: linear-gradient(to bottom, transparent, white 100%);
+}

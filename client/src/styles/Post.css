@@ -1,0 +1,9 @@
+#submitComment {
+  background-color: #294090;
+  border-color: #294090;
+}
+
+#submitComment:hover {
+  background-color: #1c2e60;
+  border-color: #1c2e60;
+}

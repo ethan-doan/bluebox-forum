@@ -1,22 +1,24 @@
 {
   "name": "bluebox-forum",
-  "version": "1.0.0",
-  "description": "BlueBox Practicum Forum Website",
-  "main": "createTopic.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Ethan Doan",
-  "license": "ISC",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "mongodb": "4.1",
-    "mongoose": "^8.0.0",
-    "morgan": "^1.10.0",
-    "punycode": "^2.3.1"
+    "mongoose": "^8.0.1"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run start-client\" \"npm run start-server\"",
+    "start-client": "cd client && npm start",
+    "start-server": "cd server && node server.js",
+    "install-all": "cd client && npm install && cd ../server && npm install",
+    "build-client": "cd client && npm run build",
+    "test-client": "cd client && npm test",
+    "test-server": "cd server && npm test",
+    "eject-client": "cd client && react-scripts eject"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }

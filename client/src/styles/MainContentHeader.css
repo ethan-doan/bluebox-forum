@@ -1,0 +1,27 @@
+.bi-plus-lg {
+  stroke: currentColor;
+}
+
+.bi-x-lg {
+  stroke: currentColor;
+}
+
+#createPostButton {
+  background-color: #294090;
+  border-color: #294090;
+}
+
+#createPostButton:hover {
+  background-color: #1c2e60;
+  border-color: #1c2e60;
+}
+
+#newTopicForm {
+  background-color: #294090;
+  border-color: #294090;
+}
+
+#newTopicForm:hover {
+  background-color: #1c2e60;
+  border-color: #1c2e60;
+}

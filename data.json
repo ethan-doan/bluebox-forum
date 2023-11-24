@@ -2,18 +2,20 @@
   {
     "title": "Exploring the Beauty of Nature",
     "description": "This comprehensive article provides an in-depth look into the breathtaking landscapes and diverse wildlife of the Amazon rainforest. Covering the ecological significance of this vast area, it dives into the variety of flora and fauna that make up the dense rainforest ecosystem. The piece highlights the unique adaptations of species, the complex interdependencies among different organisms, and the critical role the Amazon plays in global climate regulation. It also discusses the threats to the rainforest, including deforestation and climate change, and emphasizes the urgent need for conservation efforts. Through vivid descriptions and captivating imagery, the article brings to life the incredible beauty and fragility of one of the world's most vital natural habitats.",
-    "author": "Jane Doe",
+    "author": "NatureExplorerJane",
     "likes": 120,
+    "dislikes": 12,
     "views": 300,
     "featuredImage": "https://example.com/images/nature.jpg",
     "commentCounter": 2,
+    "date": "2023-11-21T10:00:00.000Z",
     "comments": [
       {
-        "author": "John Smith",
+        "author": "JungleJohn",
         "description": "Absolutely stunning! The depth of your article really brings the Amazon to life. The way you've described the lush greenery, diverse fauna, and the intricate ecosystem is truly captivating."
       },
       {
-        "author": "Emily Johnson",
+        "author": "EcoEmily",
         "description": "Love this! Nature is truly amazing. Your article is a poignant reminder of the beauty we need to protect. The photos complement your rich descriptions perfectly."
       }
     ]
@@ -21,14 +23,16 @@
   {
     "title": "Advancements in Renewable Energy",
     "description": "This extensive article offers a detailed overview of the latest breakthroughs in solar and wind energy technologies. It explores how these technologies are rapidly evolving, their pivotal role in reducing carbon emissions, and their potential to revolutionize the energy sector. The piece delves into current innovations in energy efficiency, storage solutions, and the integration of renewable sources into existing power grids. It also examines the economic and policy factors driving renewable energy adoption, the challenges faced by the industry, and potential pathways to a sustainable energy future. The article is a must-read for anyone interested in understanding the dynamics of renewable energy and its implications for the environment and society.",
-    "author": "Alex Green",
+    "author": "GreenTechAlex",
     "likes": 90,
+    "dislikes": 9,
     "views": 250,
     "featuredImage": "https://example.com/images/renewable.jpg",
     "commentCounter": 1,
+    "date": "2023-11-20T09:00:00.000Z",
     "comments": [
       {
-        "author": "Sarah Brown",
+        "author": "SolarSarah",
         "description": "Very informative. Renewable energy is undoubtedly the future! Your article excels at breaking down complex technologies and market trends into easily understandable concepts."
       }
     ]
@@ -36,22 +40,24 @@
   {
     "title": "The Future of Artificial Intelligence",
     "description": "This insightful article examines the potential impacts and ethical considerations of AI over the coming decade. It discusses how AI is poised to transform various industries, from healthcare to finance, and the challenges and opportunities that come with this transformation. The piece delves deep into the ethical dilemmas posed by advanced AI systems, such as issues of privacy, bias, and decision-making, and explores the balance between technological advancement and human values. It also highlights the importance of responsible AI development, discussing regulatory frameworks, public policy considerations, and the role of international cooperation in ensuring AI benefits society as a whole. The article is a thought-provoking read that encourages readers to consider the broader implications of AI and its role in shaping our future.",
-    "author": "Mike Blue",
+    "author": "AIFutureMike",
     "likes": 150,
+    "dislikes": 5,
     "views": 400,
     "featuredImage": "https://example.com/images/ai.jpg",
     "commentCounter": 3,
+    "date": "2023-11-19T08:00:00.000Z",
     "comments": [
       {
-        "author": "Olivia White",
+        "author": "TechieOlivia",
         "description": "Fascinating read, especially the part about AI ethics. It's thought-provoking to consider how AI decisions could impact societal norms and individual freedoms."
       },
       {
-        "author": "Daniel Black",
+        "author": "DanielTheDeveloper",
         "description": "AI is evolving so fast, it's hard to keep up! Your article provided a very clear and in-depth perspective on the technological advancements and the significant challenges ahead."
       },
       {
-        "author": "Sophia Grey",
+        "author": "SophiaAIEnthusiast",
         "description": "I'm both excited and scared for what AI holds for the future. The potential is immense, but so are the risks, especially in terms of privacy and security. Your balanced view is greatly appreciated."
       }
     ]
