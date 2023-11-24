@@ -3,3 +3,9 @@ GET http://localhost:3000/api/posts/
 ###
 
 POST http://localhost:3000/api/posts/
+
+
+###
+
+
+POST http://localhost:3000/api/posts/65603563c2506d855f4f5539/comment

@@ -43,6 +43,28 @@ exports.createPost = async (req, res) => {
   }
 };
 
+exports.createComment = async (req, res) => {
+  const postId = req.params.postId;
+  const comment = req.body; // Assuming comment has 'author' and 'description'
+
+  try {
+    // Find the post and add the new comment
+    const post = await Post.findById(postId);
+    if (!post) {
+      return res.status(404).json({ message: "Post not found" });
+    }
+
+    post.comments.push(comment);
+    post.commentCounter = post.comments.length; // Update comment counter
+
+    await post.save();
+
+    res.status(200).json(post);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 exports.updatePost = async (req, res) => {
   try {
     const updatedPost = await Post.findByIdAndUpdate(req.params.id, req.body, {

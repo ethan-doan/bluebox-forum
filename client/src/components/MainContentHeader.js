@@ -105,6 +105,7 @@ function MainContentHeader({ onAddPosts }) {
           <Form.Group className="mb-3">
             <Form.Label htmlFor="topicAuthor">Your Name</Form.Label>
             <Form.Control
+              value={author}
               type="text"
               id="topicAuthor"
               onChange={handleAuthorChange}
@@ -114,6 +115,7 @@ function MainContentHeader({ onAddPosts }) {
           <Form.Group className="mb-3">
             <Form.Label htmlFor="topicTitle">Title</Form.Label>
             <Form.Control
+              value={title}
               type="text"
               id="topicTitle"
               onChange={handleTitleChange}
@@ -123,6 +125,7 @@ function MainContentHeader({ onAddPosts }) {
           <Form.Group className="mb-3">
             <Form.Label htmlFor="topicDescription">Description</Form.Label>
             <Form.Control
+              value={description}
               as="textarea"
               id="topicDescription"
               rows={3}
