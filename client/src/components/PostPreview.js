@@ -9,7 +9,7 @@ const PostPreview = ({ post }) => {
   useEffect(() => {
     const element = previewRef.current;
     const lineHeight = parseFloat(window.getComputedStyle(element).lineHeight);
-    const maxHeight = lineHeight * 3; // Adjust for 3 lines
+    const maxHeight = lineHeight * 5; // Adjust for 3 lines
     setApplyFade(element.scrollHeight > maxHeight);
   }, [post.description]);
 

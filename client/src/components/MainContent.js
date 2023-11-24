@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MainContentHeader from "./MainContentHeader.js";
 import PostListing from "./PostListing.js";
-import { fetchPosts } from "../api/apiClient";
+import { fetchPostsByCreate } from "../api/apiClient";
 
 function MainContent() {
   const [posts, setPosts] = useState([]);
@@ -9,7 +9,7 @@ function MainContent() {
 
   const loadPosts = async () => {
     try {
-      const data = await fetchPosts();
+      const data = await fetchPostsByCreate();
       setPosts(data);
       setLoading(false);
     } catch (error) {

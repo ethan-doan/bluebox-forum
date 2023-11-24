@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const postController = require("../controllers/postController.js");
 
-// Get all posts
-router.get("/", postController.getAllPosts);
+// Get all posts in reverse chronological order
+router.get("/", postController.getAllPostsByCreated);
 
 // // Get a specific post by ID
 router.get("/:id", postController.getPostById);

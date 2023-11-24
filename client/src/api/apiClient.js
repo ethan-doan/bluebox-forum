@@ -1,4 +1,4 @@
-export const fetchPosts = async () => {
+export const fetchPostsByCreate = async () => {
   try {
     const response = await fetch("http://localhost:3000/api/posts");
     if (!response.ok) {

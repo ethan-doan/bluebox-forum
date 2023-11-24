@@ -9,6 +9,17 @@ exports.getAllPosts = async (req, res) => {
   }
 };
 
+exports.getAllPostsByCreated = async (req, res) => {
+  try {
+    const sortField = req.query.sortField || "createdAt";
+    const sortOrder = req.query.sortOrder || -1; // -1 for descending, 1 for ascending
+    const posts = await Post.find().sort({ [sortField]: sortOrder });
+    res.json(posts);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 exports.getPostById = async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
