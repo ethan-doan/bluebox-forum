@@ -18,8 +18,8 @@ connectDB();
 // Routes Setup
 const postsRouter = require("./routes/postRoutes.js");
 app.use("/api/posts", postsRouter);
-const commentsRouter = require("./routes/commentRoutes.js");
-app.use("/api/comments", commentsRouter);
+// const commentsRouter = require("./routes/commentRoutes.js");
+// app.use("/api/comments", commentsRouter);
 
 // Catch-all Route for Handling 404 Errors
 app.use((req, res, next) => {
