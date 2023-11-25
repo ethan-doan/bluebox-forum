@@ -1,4 +1,4 @@
-const Post = require("../models/Post");
+const Post = require("../models/Post.js");
 
 exports.getAllPosts = async (req, res) => {
   try {

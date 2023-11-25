@@ -1,14 +1,25 @@
+// Express Setup
 const express = require("express");
-const cors = require("cors");
-const connectDB = require("./config/db.js");
-const postsRouter = require("./routes/postRoutes.js");
-const morgan = require("morgan");
 const app = express();
 app.use(express.json());
+
+// CORS Handling
+const cors = require("cors");
 app.use(cors());
+
+// Morgan for API Logging
+const morgan = require("morgan");
 app.use(morgan("combined"));
-app.use("/api/posts", postsRouter);
+
+// Connect to MongoDB
+const connectDB = require("./config/db.js");
 connectDB();
+
+// Routes Setup
+const postsRouter = require("./routes/postRoutes.js");
+app.use("/api/posts", postsRouter);
+const commentsRouter = require("./routes/commentRoutes.js");
+app.use("/api/comments", commentsRouter);
 
 // Catch-all Route for Handling 404 Errors
 app.use((req, res, next) => {
